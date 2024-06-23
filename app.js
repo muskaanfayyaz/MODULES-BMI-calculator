@@ -1,11 +1,15 @@
+"use strict";
 // bmiCalculator.ts
-export function calculateBMI(weight, height) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getBMICategory = exports.calculateBMI = void 0;
+function calculateBMI(weight, height) {
     if (height <= 0) {
         throw new Error("Height must be a positive number");
     }
     return weight / (height * height);
 }
-export function getBMICategory(bmi) {
+exports.calculateBMI = calculateBMI;
+function getBMICategory(bmi) {
     if (bmi < 18.5) {
         return "Underweight";
     }
@@ -19,3 +23,4 @@ export function getBMICategory(bmi) {
         return "Obesity";
     }
 }
+exports.getBMICategory = getBMICategory;
